@@ -1,40 +1,48 @@
-import React from 'react'
+
 import { NavLink } from 'react-router-dom'
+import './Header.css'
 
 const Header = () => {
+    
   return (
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    {/* <a class="navbar-brand" href="#">Navbar</a> */}
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        {/* link */}
-        <li class="nav-item">
-          <NavLink className='nav-link' to='/signup'>Sign Up</NavLink>
-        </li>
-        <li class="nav-item">
-          <NavLink className='nav-link' to='/login'>Login</NavLink>
-        </li>
-        <li class="nav-item">
-         <NavLink className='nav-link' to='/plugin'>Plugin</NavLink>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
+    // <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-dark" >
+      {/* <!-- Container wrapper --> */}
+      <div class="container-fluid">
+    
+        {/* <!-- Navbar brand --> */}
+        <a class="navbar-brand" href="#">Plugin</a>
+    
+        {/* <!-- Toggle button --> */}
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    
+        {/* <!-- Collapsible wrapper --> */}
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+            {/* <!-- Link --> */}
+            <li className="nav-item">
+           <NavLink className="nav-link" to="/">Signup</NavLink>
+          </li>
+            <li className="nav-item">
+           <NavLink className="nav-link" to="/login">Login</NavLink>
+          </li>
+            <li className="nav-item">
+           <NavLink className="nav-link" to="/plugin">Plugin</NavLink>
+          </li>
+            <li className="nav-item">
+           <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
+          </li>
+          </ul>
+    
+        </div>
+      </div>
+      {/* <!-- Container wrapper --> */}
+    </nav>
+    // <!-- Navbar -->
     
   )
 }
