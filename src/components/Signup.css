@@ -1,0 +1,31 @@
+/* h1{
+   text-align: center;
+    text-shadow: 1px 2px;
+}
+
+.form-control{
+    box-sizing: border-box;
+    background-color: aliceblue;
+    padding: 5px;
+}
+.container{
+     display: flex;
+     align-items: center;
+     width: 70%;
+}
+
+.ButN{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn{
+   letter-spacing: 2px;
+  
+}
+
+.card{
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px 2px rgb(136, 131, 131);
+}
+ */
