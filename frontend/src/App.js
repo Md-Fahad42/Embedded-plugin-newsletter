@@ -20,8 +20,9 @@ function App() {
      
       <Routes>
      
+     <Route element={<Login></Login>} path="/"/>
      <Route element={<Login></Login>} path="login"/>
-     <Route element={<Signup></Signup>} path="/" />
+     <Route element={<Signup></Signup>} path="signup" />
      <Route element={<Plugin></Plugin>} path="plugin" />
      <Route element={<Dashboard></Dashboard>} path="dashboard" /> 
      <Route element={<Notfound></Notfound>} path="*"></Route> 

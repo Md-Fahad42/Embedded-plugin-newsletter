@@ -25,7 +25,7 @@ const Header = () => {
     
             {/* <!-- Link --> */}
             <li className="nav-item">
-           <NavLink className="nav-link" to="/">Signup</NavLink>
+           <NavLink className="nav-link" to="/signup">Signup</NavLink>
           </li>
             <li className="nav-item">
            <NavLink className="nav-link" to="/login">Login</NavLink>

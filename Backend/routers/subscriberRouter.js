@@ -16,7 +16,7 @@ router.post('/add',(req,res) => {
     })
     .catch((err) => {
         console.log(err);
-        res.status(500).res.json(err);
+        res.status(500).json(err);
     }); 
     
 });  
