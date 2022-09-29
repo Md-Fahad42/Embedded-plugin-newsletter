@@ -96,7 +96,7 @@ const Notfound = () => {
     <div class="text">
         <h1>404 Error</h1>  
       <h2>Couldn't launch :(</h2>
-         <h3>Page Not Found - lets take you <a href="https://twitter.com/namratapdr">BACK</a></h3> 
+         <h3>Page Not Found - lets take you <a href="https://localhost:3000/#">BACK</a></h3> 
     </div>
     </div>
   )

@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const Model = require('../models/userModel')
-
+// const bcrypt = require('bycriptjs')
 
 router.post('/signup',(req, res) => {
     const formdata = req.body;
@@ -33,6 +33,23 @@ router.get('/getall',(req, res) => {
         });
     
 })
+
+
+// router.get('/getbyemail/:email',(req, res)=> {
+//     console.log(req.params.email);
+//     Model.find({email: req.params.email})
+//     .then((result)=> {
+//      console.log(result);
+//      res.json(result);
+//      })
+//      .catch((err)=>{
+//          console.log(err);
+//          res.status(500).res.json(err);
+//      });
+// })
+
+
+
 // for login data
 //for login page
 router.post('/authenticate',(req,res)=>{
@@ -46,19 +63,19 @@ router.post('/authenticate',(req,res)=>{
     //if email and password matches then result will contain their data
     
     
-            if(result){
-                if(bcrypt.compareSync(formdata.password, result.password))
-                res.json(result);
-                else{
-                    res.status(401).json(
-                        {
-                            status : 'Login Failed'}
-                    )
-                }
-            } else{
-                //if result is null
-                res.status(401).json({status: 'Login Failed'})
-            }
+             if(result){
+                 if(bcrypt.compareSync(formdata.password, result.password))
+                 res.json(result);
+                 else{
+                     res.status(401).json(
+                         {
+                         status : 'Login Failed'}
+                     )
+                 }
+             } else{
+                 //if result is null
+                 res.status(401).json({status: 'Login Failed'})
+             }
             
     
     }) //logic for validating user credentials
