@@ -12,7 +12,7 @@ const Signup = () => {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
     })
     if (response.status === 200) {

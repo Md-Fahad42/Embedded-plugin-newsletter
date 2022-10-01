@@ -1,6 +1,7 @@
 import { Formik } from "formik"
 import React from "react"
 import { useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
 
 const Login = () => {
   const navigate = useNavigate()
@@ -10,17 +11,27 @@ const Login = () => {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
     })
     if (response.status === 200) {
-      console.log("success")
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "You are registerd",
+      })
+      // console.log("success")
       const data = await response.json();
       console.log(data)
       sessionStorage.setItem('user', JSON.stringify(data));
-      resetForm()
+      navigate("/plugin");
+      resetForm();
     } else if (response.status === 401) {
-      console.log("failed")
+      Swal.fire({
+        icon: "Oops",
+        title: "Failed",
+        text: "Signup Failed",
+      })
     } else {
       console.log("Unknown error detected")
     }
